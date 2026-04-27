@@ -1,0 +1,25 @@
+# Secrets
+.env
+
+# Mosquitto runtime state
+mosquitto/config/passwords
+mosquitto/data/
+mosquitto/log/
+
+# InfluxDB runtime state
+influxdb/data/
+influxdb/config/
+
+# Grafana runtime state
+grafana/data/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
