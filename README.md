@@ -30,7 +30,7 @@ O que você precisa antes de começar:
 
 - **TrueNAS SCALE 24.10+** (Electric Eel ou superior) com Docker disponível
 - **SSH habilitado** no TrueNAS, com usuário admin que tenha permissão de rodar `docker`
-- **Pool ZFS** já criado (este README usa `dados` como exemplo)
+- **Pool ZFS** já criado (este README usa `<POOL>` como placeholder — substitua pelo nome real do seu pool)
 - **Stick Growatt ShineWiFi-X** (com USB-Serial Exar XR21V1410 ou CH340)
 - **Adaptador USB-to-TTL 3.3V** (para o flash inicial do firmware)
 - **Conexão direta entre stick e inversor** funcionando
@@ -154,9 +154,11 @@ Conecte ao WiFi `GrowattConfig`, abra `http://192.168.4.1`, vá em **Configure W
 
 ### 2.1 Criar dataset
 
+> **Nota**: Os comandos abaixo usam `<POOL>` como placeholder pro nome do seu pool ZFS. Substitua pelo nome real (ex: `tank`, `data`, `pool0` — o que aparece em `sudo zpool list -H -o name`).
+
 Na UI do TrueNAS:
 
-1. **Datasets** → seu pool (`dados` neste exemplo) → **Add Dataset**
+1. **Datasets** → seu pool `<POOL>` → **Add Dataset**
 2. Nome: `apps`
 3. Dentro de `apps`, criar outro: `solar`
 4. **Edit Permissions** no dataset `solar`:
@@ -182,7 +184,7 @@ $EDITOR .env
 openssl rand -hex 32  # cole no INFLUXDB_ADMIN_TOKEN
 
 # Sincroniza para TrueNAS
-rsync -av --exclude='.git/' ./ admin@<IP_TRUENAS>:/mnt/dados/apps/solar/
+rsync -av --exclude='.git/' ./ admin@<IP_TRUENAS>:/mnt/<POOL>/apps/solar/
 ```
 
 ### 2.3 Preparar diretórios e senhas no TrueNAS
@@ -190,7 +192,7 @@ rsync -av --exclude='.git/' ./ admin@<IP_TRUENAS>:/mnt/dados/apps/solar/
 Via SSH no TrueNAS:
 
 ```bash
-cd /mnt/dados/apps/solar
+cd /mnt/<POOL>/apps/solar
 
 # Restringe leitura do .env
 chmod 600 .env
