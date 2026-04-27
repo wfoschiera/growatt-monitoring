@@ -271,8 +271,8 @@
           "unit": "watt"
         },
         "overrides": [
-          {"matcher": {"id": "byName", "options": "PV1InputPower"}, "properties": [{"id": "displayName", "value": "String 1 (10 painéis)"}, {"id": "color", "value": {"mode": "fixed", "fixedColor": "#FFC000"}}]},
-          {"matcher": {"id": "byName", "options": "PV2InputPower"}, "properties": [{"id": "displayName", "value": "String 2 (4 painéis)"}, {"id": "color", "value": {"mode": "fixed", "fixedColor": "#A04000"}}]}
+          {"matcher": {"id": "byName", "options": "PV1InputPower"}, "properties": [{"id": "displayName", "value": "String 1"}, {"id": "color", "value": {"mode": "fixed", "fixedColor": "#FFC000"}}]},
+          {"matcher": {"id": "byName", "options": "PV2InputPower"}, "properties": [{"id": "displayName", "value": "String 2"}, {"id": "color", "value": {"mode": "fixed", "fixedColor": "#A04000"}}]}
         ]
       },
       "gridPos": {"h": 8, "w": 12, "x": 0, "y": 15},
@@ -315,8 +315,8 @@
           "unit": "volt"
         },
         "overrides": [
-          {"matcher": {"id": "byName", "options": "PV1Voltage"}, "properties": [{"id": "displayName", "value": "String 1 (10 painéis)"}, {"id": "color", "value": {"mode": "fixed", "fixedColor": "#FFC000"}}]},
-          {"matcher": {"id": "byName", "options": "PV2Voltage"}, "properties": [{"id": "displayName", "value": "String 2 (4 painéis)"}, {"id": "color", "value": {"mode": "fixed", "fixedColor": "#A04000"}}]}
+          {"matcher": {"id": "byName", "options": "PV1Voltage"}, "properties": [{"id": "displayName", "value": "String 1"}, {"id": "color", "value": {"mode": "fixed", "fixedColor": "#FFC000"}}]},
+          {"matcher": {"id": "byName", "options": "PV2Voltage"}, "properties": [{"id": "displayName", "value": "String 2"}, {"id": "color", "value": {"mode": "fixed", "fixedColor": "#A04000"}}]}
         ]
       },
       "gridPos": {"h": 8, "w": 12, "x": 12, "y": 15},
