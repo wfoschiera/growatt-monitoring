@@ -2,6 +2,10 @@
 
 Stack auto-hospedada de monitoramento de inversor solar Growatt, contornando totalmente a nuvem do fabricante. Coleta dados via MQTT do stick ShineWiFi-X (com firmware [OpenInverterGateway](https://github.com/OpenInverterGateway/OpenInverterGateway) substituindo o original), armazena no InfluxDB com retenção infinita, visualiza no Grafana e envia alertas críticos via Telegram. Tudo roda em containers no TrueNAS SCALE.
 
+## Screenshot
+
+![Dashboard - Visão Geral](docs/screenshots/grafana_dashboard.png)
+
 ## Arquitetura
 
 ```
