@@ -408,6 +408,8 @@ Edite `.env`:
 
 Se mudar depois do primeiro `up`, as variáveis `DOCKER_INFLUXDB_INIT_*` são ignoradas (só rodam na inicialização). Para mudar bucket existente, use a UI do InfluxDB.
 
+A saída do Telegraf para esse bucket só aceita o measurement `growatt` (`namepass` em `telegraf/telegraf.conf`). Se você acrescentar outras métricas ao mesmo Telegraf (ex.: arquivos num `telegraf.d/`), dê a elas uma `[[outputs.influxdb_v2]]` própria, com outro bucket e a retenção que fizer sentido.
+
 ### Adicionar campos do inversor
 
 A lista completa de campos disponíveis depende da versão do protocolo Modbus do seu inversor (1.20, 1.24, 3.05, etc.). Veja `Growatt124.cpp` no repositório do OpenInverterGateway para a lista de seu protocolo.
